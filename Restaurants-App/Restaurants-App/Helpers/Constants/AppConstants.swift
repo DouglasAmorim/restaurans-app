@@ -11,16 +11,9 @@ class AppConstants {
     static let shared = AppConstants()
     
     func getGooglePlaceApiKey() -> String {
-        var keys: NSDictionary?
         
-        if let path = Bundle.main.path(forResource: "keys", ofType: "plist") {
-            keys = NSDictionary(contentsOfFile: path)
-            
-            let key = keys?["google_places_api_key"] as? String
-            
-            return key ?? ""
-        }
+        let info = Bundle.main.infoDictionary!
         
-        return ""
+        return info["PLACE_API_KEY"] as? String ?? ""
     }
 }

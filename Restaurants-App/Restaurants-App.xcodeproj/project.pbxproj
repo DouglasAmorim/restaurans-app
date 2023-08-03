@@ -18,7 +18,6 @@
 		E83FCFF82A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FCFF72A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift */; };
 		E83FD0062A7BDB73008687CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD0052A7BDB73008687CD /* AppDelegate.swift */; };
 		E83FD0082A7BDC0A008687CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */; };
-		E83FD00A2A7BEFB4008687CD /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83FD0092A7BEFB4008687CD /* keys.plist */; };
 		E83FD00E2A7BF08A008687CD /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD00D2A7BF08A008687CD /* AppConstants.swift */; };
 		F7930C3BEE8A472BD74CD77A /* Pods_Restaurants_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BEB617046BCA41F13E5768 /* Pods_Restaurants_App.framework */; };
 /* End PBXBuildFile section */
@@ -61,8 +60,8 @@
 		E83FCFF72A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E83FD0052A7BDB73008687CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E83FD0092A7BEFB4008687CD /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		E83FD00D2A7BF08A008687CD /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E83FD00F2A7BF7EF008687CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC7A53D825885C3714AB1CE3 /* Pods-Restaurants-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants-App.release.xcconfig"; path = "Target Support Files/Pods-Restaurants-App/Pods-Restaurants-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +141,7 @@
 		E83FCFD92A7BD306008687CD /* Restaurants-App */ = {
 			isa = PBXGroup;
 			children = (
+				E83FD00F2A7BF7EF008687CD /* Info.plist */,
 				E83FD0042A7BDB64008687CD /* App */,
 				E83FCFDC2A7BD306008687CD /* ContentView.swift */,
 				E83FCFDE2A7BD308008687CD /* Assets.xcassets */,
@@ -182,7 +182,6 @@
 				E83FCFDA2A7BD306008687CD /* Restaurants_AppApp.swift */,
 				E83FD0052A7BDB73008687CD /* AppDelegate.swift */,
 				E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */,
-				E83FD0092A7BEFB4008687CD /* keys.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -316,7 +315,6 @@
 			files = (
 				E83FCFE22A7BD308008687CD /* Preview Assets.xcassets in Resources */,
 				E83FCFDF2A7BD308008687CD /* Assets.xcassets in Resources */,
-				E83FD00A2A7BEFB4008687CD /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11FC41AB6C02476F3D34EF14 /* Pods-Restaurants-App.debug.xcconfig */;
 			buildSettings = {
+				API_KEY = AIzaSyBS3EWLkbMh85XEwZkzqdv31ZF_mL4fedM;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -645,6 +644,7 @@
 				DEVELOPMENT_TEAM = PNPC8948LP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Restaurants-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -668,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC7A53D825885C3714AB1CE3 /* Pods-Restaurants-App.release.xcconfig */;
 			buildSettings = {
+				API_KEY = AIzaSyBS3EWLkbMh85XEwZkzqdv31ZF_mL4fedM;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -676,6 +677,7 @@
 				DEVELOPMENT_TEAM = PNPC8948LP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Restaurants-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
