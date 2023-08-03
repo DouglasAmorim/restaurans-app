@@ -7,12 +7,16 @@
 
 import Foundation
 import SwiftUI
+import GooglePlaces
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        print("App did launch")
+        let key = AppConstants.shared.getGooglePlaceApiKey()
+        GMSPlacesClient.provideAPIKey(key)
+        
+        print("App did launch \(key)")
         return true
     }
     

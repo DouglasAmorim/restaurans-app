@@ -18,6 +18,8 @@
 		E83FCFF82A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FCFF72A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift */; };
 		E83FD0062A7BDB73008687CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD0052A7BDB73008687CD /* AppDelegate.swift */; };
 		E83FD0082A7BDC0A008687CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */; };
+		E83FD00A2A7BEFB4008687CD /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83FD0092A7BEFB4008687CD /* keys.plist */; };
+		E83FD00E2A7BF08A008687CD /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FD00D2A7BF08A008687CD /* AppConstants.swift */; };
 		F7930C3BEE8A472BD74CD77A /* Pods_Restaurants_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BEB617046BCA41F13E5768 /* Pods_Restaurants_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		E83FCFF72A7BD308008687CD /* Restaurants_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E83FD0052A7BDB73008687CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E83FD0092A7BEFB4008687CD /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		E83FD00D2A7BF08A008687CD /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		FC7A53D825885C3714AB1CE3 /* Pods-Restaurants-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants-App.release.xcconfig"; path = "Target Support Files/Pods-Restaurants-App/Pods-Restaurants-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +104,6 @@
 				189C74939E97398AD634C4BA /* Pods-Restaurants-AppTests.debug.xcconfig */,
 				E2F604966E4D274B5DB2D6AA /* Pods-Restaurants-AppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +145,7 @@
 				E83FD0042A7BDB64008687CD /* App */,
 				E83FCFDC2A7BD306008687CD /* ContentView.swift */,
 				E83FCFDE2A7BD308008687CD /* Assets.xcassets */,
+				E83FD00B2A7BF06C008687CD /* Helpers */,
 				E83FCFE02A7BD308008687CD /* Preview Content */,
 			);
 			path = "Restaurants-App";
@@ -178,8 +182,25 @@
 				E83FCFDA2A7BD306008687CD /* Restaurants_AppApp.swift */,
 				E83FD0052A7BDB73008687CD /* AppDelegate.swift */,
 				E83FD0072A7BDC0A008687CD /* SceneDelegate.swift */,
+				E83FD0092A7BEFB4008687CD /* keys.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E83FD00B2A7BF06C008687CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E83FD00C2A7BF07D008687CD /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E83FD00C2A7BF07D008687CD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E83FD00D2A7BF08A008687CD /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +316,7 @@
 			files = (
 				E83FCFE22A7BD308008687CD /* Preview Assets.xcassets in Resources */,
 				E83FCFDF2A7BD308008687CD /* Assets.xcassets in Resources */,
+				E83FD00A2A7BEFB4008687CD /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +482,7 @@
 				E83FCFDD2A7BD306008687CD /* ContentView.swift in Sources */,
 				E83FCFDB2A7BD306008687CD /* Restaurants_AppApp.swift in Sources */,
 				E83FD0082A7BDC0A008687CD /* SceneDelegate.swift in Sources */,
+				E83FD00E2A7BF08A008687CD /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

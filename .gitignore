@@ -197,4 +197,6 @@ Dependencies/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+*keys.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,cocoapods,ruby,objective-c
