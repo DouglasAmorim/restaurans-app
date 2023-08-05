@@ -10,10 +10,12 @@ import Foundation
 class AppConstants {
     static let shared = AppConstants()
     
-    func getGooglePlaceApiKey() -> String {
-        
-        let info = Bundle.main.infoDictionary!
-        
-        return info["PLACE_API_KEY"] as? String ?? ""
-    }
+    var placesApiKey: String = ""
+    
+//    func getGooglePlaceApiKey() -> String {
+//        
+//        let info = Bundle.main.infoDictionary!
+//        
+//        return info["PLACE_API_KEY"] as? String ?? ""
+//    }
 }

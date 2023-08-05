@@ -4,9 +4,11 @@
 source 'https://cdn.cocoapods.org/'
 
 def shared_pods
-  pod 'Alamofire'   , '5.7.1'
-  pod 'Mocker'      , '2.5.5'
-  pod 'GooglePlaces', '8.1.0'
+  pod 'Alamofire'            , '5.7.1'
+  pod 'Mocker'               , '2.5.5'
+  pod 'GooglePlaces'         , '8.1.0'
+  pod 'Firebase'             , '10.13.0'
+  pod 'FirebaseRemoteConfig' , '10.13.0'
 end
 
 target 'Restaurants-App' do

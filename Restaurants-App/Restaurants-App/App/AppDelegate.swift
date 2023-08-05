@@ -8,15 +8,19 @@
 import Foundation
 import SwiftUI
 import GooglePlaces
+import FirebaseCore
+import FirebaseRemoteConfig
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
+    var remoteConfig: RemoteConfig?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let key = AppConstants.shared.getGooglePlaceApiKey()
-        GMSPlacesClient.provideAPIKey(key)
+        self.setupFirebase()
+        self.remoteConfig = RemoteConfig.remoteConfig()
+        self.fetchRemoteConfig()
         
-        print("App did launch \(key)")
+        print("App did launch")
         return true
     }
     
@@ -26,4 +30,28 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return sceneConfig
     }
     
+    private func setupGooglePlaces() {
+        DispatchQueue.main.async {
+            let key = AppConstants.shared.placesApiKey
+            GMSPlacesClient.provideAPIKey(key)
+        }
+    }
+    
+    private func setupFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    private func fetchRemoteConfig() {
+        guard let remoteConfig = self.remoteConfig else { return }
+        
+        remoteConfig.fetch(withExpirationDuration: 0) { (status, error) in
+            guard error == nil else { return }
+            
+            remoteConfig.activate { [weak self] _, _ in
+                guard let self = self else { return }
+                AppConstants.shared.placesApiKey = remoteConfig.configValue(forKey: "places_api_key").stringValue ?? ""
+                self.setupGooglePlaces()
+            }
+        }
+    }
 }
