@@ -14,7 +14,7 @@ struct Restaurants_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NearbyRestaurants()
         }
     }
 }
